@@ -15,7 +15,7 @@ pipeline {
         stage('Testing') {
             steps {
                 bat 'npm i'
-                bat "npx run --browser ${BROWSER} --spec ${SPEC}"
+                bat "npm run --browser ${BROWSER} --spec ${SPEC}"
             }
         }
         stage('Deploy') {
