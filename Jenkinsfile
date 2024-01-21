@@ -26,8 +26,18 @@ pipeline {
     }
 }
 
-post {
-    always{
-        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+    post {
+        always {
+           echo "Se temrino de ejecutar el pipeline"
+        }
+        success {
+            echo "esto esta way...!!!!!!!"
+        }
+        failure {
+            // Acciones que se ejecutarán solo si alguna de las etapas falla
+        }
+        unstable {
+            // Acciones que se ejecutarán solo si alguna de las etapas es inestable
+        }
     }
 }
