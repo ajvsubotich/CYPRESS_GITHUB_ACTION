@@ -19,25 +19,17 @@ pipeline {
             }
         }
         stage('Deploy') {
-            steps{
+            steps {
                 echo 'Deploying project'
             }
         }
     }
-}
 
     post {
         always {
-           echo "Se temrino de ejecutar el pipeline"
-        }
-        success {
-            echo "esto esta way...!!!!!!!"
-        }
-        failure {
-            // Acciones que se ejecutarán solo si alguna de las etapas falla
-        }
-        unstable {
-            // Acciones que se ejecutarán solo si alguna de las etapas es inestable
+            /* groovylint-disable-next-line LineLength */
+            echo ("wuhuuuu.....!!!")
         }
     }
 }
+
