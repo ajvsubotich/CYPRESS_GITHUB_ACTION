@@ -11,7 +11,7 @@ pipeline {
       steps {
         bat 'npm i'
         bat "npx  cypress run --browser ${BROWSER} --spec ${SPEC}"
-        emailext(subject: 'Prueba de Jenkins', body: 'esto es una prueba ', attachLog: true, to: 'jennifer.simoza@gmail.com')
+        emailext(subject: 'Prueba de Jenkins', body: 'esto es una prueba ', attachLog: true, to: 'ajvsubotich@gmail.com')
       }
     }
 
